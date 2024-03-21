@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roger Federer</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+    #content {
+        padding: 20px;
+    }
+    #tennis-ball {
+        width: 200px;
+        height: 200px;
+        background-image: url('img/tennisball.webp');
+        background-size: cover;
+        position: absolute;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Roger Federer</h1>
+</header>
+<div id="content">
+    <p>Roger Federer ist ein professioneller Tennisspieler aus der Schweiz, der als einer der größten Tennisspieler aller Zeiten gilt.</p>
+    <p>Er hat zahlreiche Rekorde gebrochen und unzählige Titel gewonnen, darunter 20 Grand-Slam-Titel.</p>
+    <p>Federer ist bekannt für sein elegantes Spiel, seine Vielseitigkeit und seine Fähigkeit, auf verschiedenen Belägen zu dominieren.</p>
+    <p>Er ist auch für sein Engagement abseits des Platzes bekannt, darunter seine Wohltätigkeitsarbeit und sein Einsatz für die Förderung des Sports.</p>
+    <img src="img/rogerfederer.webp" height="500">
+</div>
+<div id="tennis-ball"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var tennisBall = document.getElementById('tennis-ball');
+        var bodyRect = document.body.getBoundingClientRect();
+
+        document.addEventListener('mousemove', function(event) {
+            var mouseX = event.clientX - bodyRect.left;
+            var mouseY = event.clientY - bodyRect.top;
+
+            tennisBall.style.left = mouseX + 'px';
+            tennisBall.style.top = mouseY + 'px';
+        });
+    });
+</script>
+</body>
+</html>
